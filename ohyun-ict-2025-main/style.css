@@ -1,0 +1,34 @@
+.co{
+    display:inline-block;
+    padding-top: 4px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #8e8e8e;
+    vertical-align: top;
+}
+
+
+h3{
+    display: inline;
+    padding-right: 6px;
+    min-height: 25px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+color: #111;
+}
+.time{
+    color:#6a6a6a
+}
+div.container{
+    border: solid 1px #e0e0e0;
+    border-radius: 12px;
+    width:602px;
+    padding:20px 24px 8px;
+    margin:auto;
+}
+img{
+    width:200px;
+    border-radius: 12px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="board">
+
+    </ul>
+    <form id="post-form">
+        <input type=" text" id="write">
+        <button>추가</button>
+    </form>
+</body>
+<script>
+    const todos = [];
+    function init(){
+        JSON.parse(localStorage.getItem('todos')).forEach((todo)=>{
+            todos.push(todo);
+        });
+        todos.forEach(addTodo);
+    }
+    init();
+    // 어떤값을 입력받아서 li를 만들고 그안에 값을 넣고 ul에 추가하는 함수
+    function addTodo(postText){
+        const post=document.createElement("li");
+        post.innerText = postText;
+        document.querySelector("#board").appendChild(post);
+    }
+
+    document.querySelector("#post-form").addEventListener("submit",(e)=>{
+        e.preventDefault();
+        const postText= document.querySelector("#write").value;
+        if (postText!=="") {
+            document.querySelector('#write').value="";
+            todos.push(postText);
+            localStorage.setItem('todos',JSON.stringify(todos));
+            document.querySelector('#board').innerHTML="";
+            todos.forEach(addTodo);
+
+        }
+        console.log(todos);
+    })
+    
+</script>
+</html>
