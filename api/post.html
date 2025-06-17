@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>여기는 게시판이다</h1>
+    <nav>
+        <button id="toggle-write">글쓰기</button>
+        <button id="toggle-board">게시판</button>
+    </nav>
+    <ol id="board"></ol>
+    <button id="post-more">더보기</button>
+    <form id="post-form">
+        <input type="text" name="title" id="title">
+        <br/>
+        <textarea name="content" id="content"></textarea>
+        <button>제출</button>
+    </form>
+
+</body>
+<script src="./app.js"></script>
+</html>
